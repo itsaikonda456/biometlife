@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import logo from '../../assets/logo-biomet.png';
+import './Navbar.css';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -36,31 +37,31 @@ export default function Navbar() {
         </button>
 
         {/* Navigation Links */}
-        <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
-          <ul className="navbar-nav ms-auto gap-lg-4 text-center text-lg-start">
+        <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`} >
+          <ul className="navbar-nav ms-auto gap-lg-4 text-center text-lg-start " style={{color:'var(--text-dark)'}} >
 
             <li className="nav-item">
-              <a className="nav-link fw-medium text-dark" href="#about">About us</a>
+              <a className="nav-link fw-medium " href="#about">About us</a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link fw-medium text-dark" href="#product">Product</a>
+              <a className="nav-link fw-medium " href="#product">Product</a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link fw-medium text-dark" href="#technology">Technology</a>
+              <a className="nav-link fw-medium " href="#technology">Technology</a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link fw-medium text-dark" href="#resources">Resources</a>
+              <a className="nav-link fw-medium " href="#resources">Resources</a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link fw-medium text-dark" href="#partners">Partners</a>
+              <a className="nav-link fw-medium " href="#partners">Partners</a>
             </li>
 
             <li className="nav-item">
-              <a className="nav-link fw-medium text-dark" href="#contact">Contact</a>
+              <a className="nav-link fw-medium " href="#contact">Contact</a>
             </li>
 
           </ul>
