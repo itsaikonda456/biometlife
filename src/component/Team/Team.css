@@ -1,0 +1,164 @@
+/* ===========================
+   TEAM SECTION
+=========================== */
+.team-section {
+  padding: 120px 100px;
+  text-align: center;
+}
+
+/* Top line */
+.team-line {
+  width: 112px;
+  height: 4px;
+  background: linear-gradient(180deg, #1FCBD4 0%, #63C297 91%);
+  border-radius: 64px;
+  margin: 0 auto 20px auto;
+}
+
+.team-subtitle {
+  color: #00004D;
+  font-size: 22px;
+  font-family: Inter;
+  font-weight: 500;
+}
+
+.team-title {
+  font-size: 48px;
+  font-family: "Exo 2";
+  font-weight: 600;
+  color: #1FCBD4;
+  margin-top: 20px;
+}
+
+.team-desc {
+  max-width: 760px;
+  margin: 16px auto 0;
+  font-size: 20px;
+  color: #161616;
+  line-height: 32px;
+  font-family: Inter;
+}
+
+/* ===========================
+   PERFECT CARD DESIGN (like card #2)
+=========================== */
+.team-card {
+  width: 250px;                    /* same width as preferred card */
+  height: 300px;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.15); /* exact clean shadow */
+  transition: transform 0.25s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+}
+
+/* IMAGE — important for radius fix */
+.team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit; /* Ensures top corners look clean */
+}
+
+/* GRADIENT OVERLAY — same as card 2 */
+.team-gradient {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 55%;
+  border-radius: inherit;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.55) 65%,
+    rgba(0,0,0,0.85) 100%
+  );
+  z-index: 2;
+}
+
+/* TEXT AREA */
+.team-info {
+  position: absolute;
+  bottom: 18px;
+  left: 20px;
+  z-index: 3;
+  text-align: left;
+}
+
+.team-name {
+  color: white;
+  font-size: 18px;
+  font-family: Inter;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.team-degree {
+  color: white;
+  font-size: 14px;
+  font-family: "Exo 2";
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.team-role {
+  color: rgba(255,255,255,0.75);
+  font-size: 14px;
+  font-family: Inter;
+}
+
+/* DO NOT DISPLAY BORDER */
+.team-hover-border {
+  display: none;
+}
+
+/* ===========================
+   PERFECT SPACING (equal left-right gap)
+=========================== */
+
+/* Equal spacing */
+.row.g-4 {
+  --bs-gutter-x: 3.2rem !important;
+  --bs-gutter-y: 3rem !important;
+}
+
+/* Center alignment - remove previous right shift */
+.team-section .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  justify-content: center;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1200px) {
+  .team-card {
+    width: 230px;
+    height: 290px;
+  }
+}
+
+@media (max-width: 992px) {
+  .team-section {
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 60px 20px;
+  }
+
+  .team-card {
+    width: 90%;
+    height: 300px;
+  }
+}
