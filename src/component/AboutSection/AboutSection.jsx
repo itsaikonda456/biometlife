@@ -37,13 +37,13 @@ const AboutSection = () => {
           </h2>
 
           {/* Paragraphs */}
-          <p className="mb-3" style={{ color: "var(--secondary-color)" }}>
+          <p className="mb-3 " style={{ color: "var(--secondary-color)",width:'80%'  }}>
             Established in 2025, Biomet.life emerged from a groundbreaking
             collaboration between Microsoft and the University of Cambridge
             to address the need for quantifiable biodiversity metrics.
           </p>
 
-          <p className="mb-3" style={{ color: "var(--secondary-color)" }}>
+          <p className="mb-3" style={{ color: "var(--secondary-color)" ,width:'80%' }}>
             Our platform combines cutting-edge AI technology with rigorous
             scientific methodology to transform how organizations understand
             and manage their impact on nature.

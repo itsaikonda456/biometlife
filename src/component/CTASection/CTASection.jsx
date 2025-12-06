@@ -5,11 +5,13 @@ export default function CTASection() {
   return (
     <section 
       style={{
-        background: "linear-gradient(135deg, #0a2540 0%, #0d3d5c 50%, #1a5c7a 100%)",
-        padding: "100px 20px",
-        position: "relative",
-        overflow: "hidden",
-      }}
+  backgroundImage: "url('./src/assets/CTASection.png')", // add your image path here
+  backgroundSize: "cover",       // makes sure the image covers the whole container
+  backgroundPosition: "center",  // centers the image
+  padding: "100px 20px",
+  position: "relative",
+  overflow: "hidden",
+}}
     >
       {/* Animated Background Elements */}
       <div

@@ -12,8 +12,24 @@ import Endtoend from "./component/EndToEnd/Endtoend";
 import Insights from "./component/Insights/Insights";
 import Pricing from "./component/Pricing/Pricing";
 import Team from "./component/Team/Team";
-
+import wave from './assets/wave.png'
+import BlogDetail from "./component/blogDetail/blogDetail.jsx";
 function App() {
+  const blog = {
+  category: "AI & Ecology",
+  title: "The Biodiversity Challenge: A Call to Action",
+  subtitle: "Understanding Biodiversity and Its Broader Impact ",
+  author: "Sanjana",
+  date: "Dec 2025",
+  readTime: "4 min read",
+  image: "../src/assets/blogd.png",
+  sections: [
+    { title: "Intro", content: "This is intro..." },
+    { title: "Why biodiversity", content: "Because..." }
+  ],
+  tableOfContents: ["Intro", "Why biodiversity"],
+  tags: ["Machine Learning", "Remote Sensing", "Conservation"]
+};
   return (
     <>
 
@@ -28,7 +44,8 @@ function App() {
       <UseCases/>
       <CTASection/>
       <Footer/>
-     
+
+     <BlogDetail blog={blog}/>
     </>
   );
 }
