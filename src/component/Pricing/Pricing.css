@@ -1,0 +1,224 @@
+.pricing-section {
+  width: 100%;
+  padding: 64px 100px;
+  background: #e6feff;
+}
+
+/* Header */
+.pricing-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.pricing-line {
+  width: 148px;
+  height: 4px;
+  background: linear-gradient(180deg, #1fcbd4 0%, #63c297 91%);
+  border-radius: 64px;
+}
+
+.pricing-subtitle {
+  font-size: 22px;
+  font-weight: 500;
+  color: #00004d;
+  font-family: Inter;
+}
+
+.pricing-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.green-title {
+  font-size: 40px;
+  color: #63c297;
+  font-weight: 600;
+  font-family: Exo 2;
+}
+
+.blue-title {
+  font-size: 40px;
+  color: #00004d;
+  font-weight: 600;
+  font-family: Exo 2;
+}
+
+.pricing-description {
+  max-width: 750px;
+  font-size: 16px;
+  color: #161616;
+  line-height: 26px;
+  font-family: Inter;
+}
+
+/* Cards */
+.pricing-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 20px;
+  width: 320px;        /* NEW CLEAN PROFESSIONAL WIDTH */
+  margin: 0 auto;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+  transition: 0.25s ease;
+  margin-top: 20px;
+}
+
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.pricing-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing-icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* Title + description */
+.plan-title {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: Inter;
+}
+
+.plan-desc {
+  font-size: 15px;
+  color: #161616;
+  line-height: 22px;
+  font-family: Inter;
+}
+
+/* Price */
+.plan-price {
+  font-size: 32px;
+  font-weight: 600;
+  font-family: Exo 2;
+}
+
+.plan-price-sub {
+  font-size: 13px;
+  color: rgba(22,22,22,0.64);
+  font-family: Inter;
+}
+
+/* Features */
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature-bullet {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tick {
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+}
+
+.feature-text {
+  font-size: 14px;
+  color: #161616;
+  font-family: Inter;
+}
+
+/* Plan note */
+.plan-note {
+  font-size: 13px;
+  color: rgba(22,22,22,0.64);
+  font-weight: 500;
+  font-family: Inter;
+}
+
+/* Buttons */
+.pricing-btn {
+  border-radius: 16px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  border: 1px solid;
+  background: transparent;
+  transition: 0.25s ease;
+}
+
+/* Lite */
+.pricing-card.lite .pricing-btn {
+  border-color: #63c297;
+  color: #63c297;
+}
+.pricing-card.lite:hover .pricing-btn {
+  background: linear-gradient(135deg, #63c297, #63c297);
+  color: #fff;
+}
+
+/* Standard */
+.pricing-card.standard .pricing-btn {
+  border-color: #1fcbd4;
+  color: #1fcbd4;
+}
+.pricing-card.standard:hover .pricing-btn {
+  background: linear-gradient(135deg, #1fcbd4, #63c297);
+  color: #fff;
+}
+
+/* Plus */
+.pricing-card.plus .pricing-btn {
+  border-color: #00004d;
+  color: #00004d;
+}
+.pricing-card.plus:hover .pricing-btn {
+  background: linear-gradient(135deg, #00004d, #63c297);
+  color: #fff;
+}
+
+/* Footer */
+.pricing-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: rgba(22,22,22,0.64);
+  font-family: Inter;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .pricing-section {
+    padding: 64px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 64px 20px;
+  }
+}

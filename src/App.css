@@ -39,4 +39,44 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+
+
+/* landing css */
+
+
+.img-align{
+  left: -55% !important;
+  position: absolute !important;
+  top: 0 !important;
 }
+
+
+/* end to end section css */
+
+/* Card hover tilt */
+.card-tilt {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-tilt:hover {
+  transform: rotateY(-6deg) translateY(-4px);
+  box-shadow: 0px 12px 20px -6px rgba(0, 0, 0, 0.25);
+}
+
+/* Line behind cards */
+.bg-line {
+  z-index: 1;
+}
+
+/* Cards appear above the line */
+.card-wrapper {
+  z-index: 2;
+}
+
+
+
+
+/* Insights css  */
+

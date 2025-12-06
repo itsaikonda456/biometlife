@@ -1,80 +1,330 @@
-// import { PlayIcon } from "@heroicons/react/24/solid";
+import React, { useState } from "react";
 
-export default function HeroSection() {
+function HeroSection() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  // ===========================================
+  // 🔥 SLIDES DATA
+  // ===========================================
+  const slides = [
+    {
+      gif: "/videos/hero page vedio1.mp4",
+      gifPosition: "center",
+
+      titleTop: "A Novel Way to Measure",
+      titleBottom: "Biodiversity Impact",
+      subtitle:
+        "Harnessing AI to converge nature and business data into one Data Fabric for integrated scenario planning and risk mitigation.",
+
+      stat1Value: "60%",
+      stat1Label: "Global GDP at Risk",
+      stat1Sub: "From biodiversity loss",
+
+      stat2Value: "80%",
+      stat2Label: "Biodiversity data",
+      stat2Sub: "Remains unused",
+    },
+
+    {
+      gif: "/videos/Hero-page-video2.gif",
+      gifPosition: "left",
+
+      titleTop: "Designed with the",
+      titleBottom: "Soul of Nature",
+      subtitle:
+        "Scientific Rigor and Impact Modelling that bridge data and scientific metrics to scenario planning and auditable interventions for conservation and restoration.",
+
+      stat1Value: "10X",
+      stat1Label: "Species analyzed",
+      stat1Sub: "Compared to traditional ecology science",
+
+      stat2Value: "82%",
+      stat2Label: "Model Accuracy Improvement",
+      stat2Sub: "In biodiversity classification",
+    },
+
+    {
+      gif: "/videos/Hero-page-video-3.gif",
+      gifPosition: "right",
+
+      titleTop: "Nature , Quantified",
+      titleBottom: "",
+      subtitle:
+        "Empower enterprises to measure and report their nature related risks with location-specific granularity.",
+
+      stat1Value: "75%",
+      stat1Label: "Business-as-Nature Analytics",
+      stat1Sub: "By 2030 projected",
+
+      stat2Value: "40%",
+      stat2Label: "Increase in ESG Transparency",
+      stat2Sub: "Using sustainability metrics",
+    },
+  ];
+
+  // Current Slide
+  const cur = slides[activeSlide];
+
   return (
-    <p>helloo home</p>
-    // <section className="relative w-full overflow-hidden bg-[#0a0f2b]">
+    <div
+      className="position-relative overflow-hidden"
+      style={{
+        minHeight: "90vh",
+        background: "#020617",
+      }}
+    >
+      {/* ==========================
+    🔥 BACKGROUND MEDIA (GIF or VIDEO)
+=========================== */}
+      {cur.gif.endsWith(".mp4") ? (
+        <video
+          key={cur.gif}
+          src={cur.gif}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="position-absolute top-0"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            opacity: 0.45,
+            zIndex: 1,
+            transition: "0.6s ease",
 
-    //   {/* 🎨 Radial Gradient Background */}
-    //   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#11204d_0%,#0a0f2b_60%,#050814_100%)] opacity-95" />
+            ...(cur.gifPosition === "center" && { left: "0" }),
+            ...(cur.gifPosition === "left" && { left: "-50%" }),
+            ...(cur.gifPosition === "right" && { right: "-50%", left: "auto" }),
+          }}
+        />
+      ) : (
+        <img
+          key={cur.gif}
+          src={cur.gif}
+          alt="background animation"
+          className="position-absolute top-0"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            opacity: 0.45,
+            zIndex: 1,
+            transition: "0.6s ease",
 
-    //   {/* 🔌 Circuit Overlay */}
-    //   <div
-    //     className="absolute inset-0 opacity-20 bg-cover bg-center"
-    //     style={{
-    //       backgroundImage:
-    //         "url('https://static.vecteezy.com/system/resources/previews/009/344/948/original/abstract-blue-futuristic-circuit-board-technology-background-hi-tech-digital-technology-concept-free-vector.jpg')",
-    //     }}
-    //   />
+            ...(cur.gifPosition === "center" && { left: "0" }),
+            ...(cur.gifPosition === "left" && { left: "-50%" }),
+            ...(cur.gifPosition === "right" && { right: "-50%", left: "auto" }),
+          }}
+        />
+      )}
 
-    //   {/* MAIN CONTENT */}
-    //   <div className="relative max-w-4xl mx-auto px-6 pt-28 pb-36 text-center">
-        
-    //     {/* Heading */}
-    //     <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-    //       <span className="text-[#50fa7b] block">A Novel Way to Measure</span>
-    //       <span className="text-[#8be9fd] block mt-1">Biodiversity Impact</span>
-    //     </h1>
+      {/* Dark gradient overlay */}
+      <div
+        className="position-absolute top-0 start-0 w-100 h-100"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(2,6,23,0.85), rgba(7,19,38,0.75), rgba(11,26,58,0.88))",
+          zIndex: 2,
+        }}
+      ></div>
 
-    //     {/* Subtext */}
-    //     <p className="text-gray-200 mt-6 text-lg md:text-xl leading-relaxed">
-    //       Harnessing AI to converge nature and business data into one Data Fabric
-    //       for integrated scenario planning and risk mitigation
-    //     </p>
+      {/* Glow objects */}
+      <div
+        className="position-absolute rounded-circle"
+        style={{
+          width: "360px",
+          height: "360px",
+          background: "rgba(34, 211, 238, 0.15)",
+          filter: "blur(100px)",
+          top: "10%",
+          left: "12%",
+          zIndex: 2,
+        }}
+      ></div>
 
-    //     {/* CTA Button */}
-    //     <div className="mt-8 flex justify-center">
-    //       <button className="flex items-center gap-2 border border-[#8be9fd] text-[#8be9fd] px-6 py-3 rounded-full hover:bg-[#10233f] transition">
-    //         <PlayIcon className="h-5 w-5 fill-[#8be9fd]" />
-    //         Watch Demo
-    //       </button>
-    //     </div>
+      <div
+        className="position-absolute rounded-circle"
+        style={{
+          width: "500px",
+          height: "500px",
+          background: "rgba(74, 222, 128, 0.15)",
+          filter: "blur(130px)",
+          bottom: "12%",
+          right: "10%",
+          zIndex: 2,
+        }}
+      ></div>
 
-    //     {/* Stats Cards */}
-    //     <div className="mt-16 flex flex-col md:flex-row justify-center gap-8">
+      {/* ==========================
+            MAIN CONTENT
+      =========================== */}
+      <div className="container position-relative z-3 pt-5 pb-5">
+        <div
+          className="mx-auto text-center"
+          style={{ maxWidth: "900px", marginTop: "60px" }}
+        >
+          {/* Heading */}
+          <h1
+            className="fw-bold mb-4"
+            style={{
+              fontSize: "clamp(2.4rem, 4vw, 4.3rem)",
+              lineHeight: 1.2,
+            }}
+          >
+            <span style={{ color: "#22d3ee" }}>{cur.titleTop}</span>
+            <br />
+            <span style={{ color: "#4ade80" }}>{cur.titleBottom}</span>
+          </h1>
 
-    //       {/* Card 1 */}
-    //       <div className="w-60 rounded-xl bg-[#0d143a]/60 border border-[#8be9fd]/30 p-6 backdrop-blur-sm">
-    //         <h3 className="text-white text-4xl font-bold">60%</h3>
-    //         <p className="text-gray-300 mt-2 text-lg">Global GDP at Risk</p>
-    //         <p className="text-gray-400 text-sm mt-1">From biodiversity loss</p>
-    //       </div>
+          {/* Subtitle */}
+          <p
+            className="text-light mb-4"
+            style={{
+              maxWidth: "750px",
+              margin: "0 auto",
+              fontSize: "clamp(1rem, 1.2vw, 1.2rem)",
+              lineHeight: 1.65,
+              opacity: 0.9,
+            }}
+          >
+            {cur.subtitle}
+          </p>
 
-    //       {/* Card 2 */}
-    //       <div className="w-60 rounded-xl bg-[#0d143a]/60 border border-[#8be9fd]/30 p-6 backdrop-blur-sm">
-    //         <h3 className="text-white text-4xl font-bold">80%</h3>
-    //         <p className="text-gray-300 mt-2 text-lg">Biodiversity data</p>
-    //         <p className="text-gray-400 text-sm mt-1">Remains unused</p>
-    //       </div>
+          {/* CTA Button */}
+          <button
+            className="btn d-inline-flex align-items-center fw-semibold shadow"
+            style={{
+              backgroundColor: "#22d3ee",
+              color: "#0f172a",
+              padding: "0.75rem 2.3rem",
+              borderRadius: "50px",
+              fontSize: "1.05rem",
+            }}
+          >
+            <svg
+              width="18"
+              height="18"
+              fill="currentColor"
+              className="me-2"
+              viewBox="0 0 16 16"
+            >
+              <path d="M4.5 3.5v9l7-4.5-7-4.5z" />
+            </svg>
+            Watch Demo
+          </button>
+        </div>
 
-    //     </div>
+        {/* ==========================
+            STATS SECTION
+      =========================== */}
+        <div
+          className="row justify-content-center g-4 mt-5"
+          style={{ maxWidth: "950px", margin: "0 auto" }}
+        >
+          {/* STAT BOX 1 */}
+          <div className="col-10 col-md-6 col-lg-5">
+            <div
+              className="text-center p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center"
+              style={{
+                minHeight: "190px",
+                background: "rgba(15, 23, 42, 0.55)",
+                border: "1.5px solid rgba(34, 211, 238, 0.6)",
+                backdropFilter: "blur(12px)",
+              }}
+            >
+              <div
+                className="fw-bold"
+                style={{
+                  fontSize: "clamp(2rem, 3vw, 3.2rem)",
+                  color: "#22d3ee",
+                }}
+              >
+                {cur.stat1Value}
+              </div>
 
-    //     {/* Slider Dots */}
-    //     <div className="flex justify-center mt-10 gap-3">
-    //       <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
-    //       <span className="w-3 h-3 bg-white rounded-full"></span>
-    //       <span className="w-3 h-3 bg-gray-400 rounded-full"></span>
-    //     </div>
-    //   </div>
+              <div
+                className="text-white fw-semibold"
+                style={{
+                  fontSize: "clamp(1rem, 1.3vw, 1.2rem)",
+                }}
+              >
+                {cur.stat1Label}
+              </div>
 
-    //   {/* Wavy Bottom Divider */}
-    //   <svg
-    //     className="absolute bottom-0 left-0 w-full"
-    //     viewBox="0 0 1440 120"
-    //     fill="white"
-    //   >
-    //     <path d="M0,64L120,69.3C240,75,480,85,720,74.7C960,64,1200,32,1320,16L1440,0L1440,120L1320,120C1200,120,960,120,720,120C480,120,240,120,120,120L0,120Z" />
-    //   </svg>
-    // </section>
+              <div className="text-secondary small">{cur.stat1Sub}</div>
+            </div>
+          </div>
+
+          {/* STAT BOX 2 */}
+          <div className="col-10 col-md-6 col-lg-5">
+            <div
+              className="text-center p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center"
+              style={{
+                minHeight: "190px",
+                background: "rgba(15, 23, 42, 0.55)",
+                border: "1.5px solid rgba(34, 211, 238, 0.6)",
+                backdropFilter: "blur(12px)",
+              }}
+            >
+              <div
+                className="fw-bold"
+                style={{
+                  fontSize: "clamp(2rem, 3vw, 3.2rem)",
+                  color: "#22d3ee",
+                }}
+              >
+                {cur.stat2Value}
+              </div>
+
+              <div
+                className="text-white fw-semibold"
+                style={{
+                  fontSize: "clamp(1rem, 1.3vw, 1.2rem)",
+                }}
+              >
+                {cur.stat2Label}
+              </div>
+
+              <div className="text-secondary small">{cur.stat2Sub}</div>
+            </div>
+          </div>
+        </div>
+
+        {/* ==========================
+            PAGINATION DOTS
+      =========================== */}
+        <div className="d-flex justify-content-center gap-2 mt-4 mb-5">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveSlide(index)}
+              style={{
+                width: activeSlide === index ? "30px" : "10px",
+                height: "10px",
+                borderRadius: "50px",
+                backgroundColor: activeSlide === index ? "#fff" : "#6b7280",
+                border: "none",
+                transition: "0.25s ease",
+              }}
+            ></button>
+          ))}
+        </div>
+      </div>
+
+      {/* Bottom White Shape */}
+      <div
+        className="position-absolute bottom-0 start-0 end-0"
+        style={{
+          height: "90px",
+          background: "#ffffff",
+          transform: "skewY(-2deg)",
+          transformOrigin: "bottom right",
+          zIndex: 3,
+        }}
+      ></div>
+    </div>
   );
 }
+
+export default HeroSection;
