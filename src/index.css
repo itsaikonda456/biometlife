@@ -1,1 +1,17 @@
-@import "tailwindcss";
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+  --primary-color: #1a2a5c;
+  --secondary-color: #3c4858;
+  --accent-color: #38b684;
+  --background-light: #f8f9fa;
+  --text-dark: #1c1c1c;
+  --text-muted: #6c757d;
+  --primary-font: "Exo 2", sans-serif;
+  --secondary-font: "Inter", sans-serif;
+}
+body {
+  font-family: var(--secondary-font); /* Inter as default */
+}
