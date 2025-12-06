@@ -11,6 +11,7 @@
   --text-muted: #6c757d;
   --primary-font: "Exo 2", sans-serif;
   --secondary-font: "Inter", sans-serif;
+  --lightblue-color:"E6FEFF"
 }
 body {
   font-family: var(--secondary-font); /* Inter as default */

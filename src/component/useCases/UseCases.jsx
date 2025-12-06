@@ -103,7 +103,7 @@ export default function UseCases() {
                 borderRadius: "4px",         
                    }}></div>
           </div>
-          <h2 className="fw-bold mb-3" style={{ fontSize: "clamp(2rem, 5vw, 2.5rem)", color: "#1a1a1a" }}>
+          <h2 className="fw-bold mb-3" style={{ fontSize: "clamp(2rem, 5vw, 2.5rem)", color: "var(--text-dark)" }}>
             Solutions for <span style={{ color: "#4db8a8" }}>Every Industry</span>
           </h2>
           <p className="text-muted mx-auto" style={{ maxWidth: "600px", fontSize: "1rem", lineHeight: "1.6" }}>

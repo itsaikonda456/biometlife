@@ -18,15 +18,15 @@
 .team-subtitle {
   color: #00004D;
   font-size: 22px;
-  font-family: Inter;
+  font-family: var(--accent-color);
   font-weight: 500;
 }
 
 .team-title {
   font-size: 48px;
-  font-family: "Exo 2";
+  font-family: var(--primary-font);
   font-weight: 600;
-  color: #1FCBD4;
+  color: var(--accent-color);
   margin-top: 20px;
 }
 
@@ -34,9 +34,9 @@
   max-width: 760px;
   margin: 16px auto 0;
   font-size: 20px;
-  color: #161616;
+  color: var(--text-dark);
   line-height: 32px;
-  font-family: Inter;
+  font-family: var(--secondary-font);
 }
 
 /* ===========================
@@ -47,7 +47,7 @@
   height: 300px;
   border-radius: 22px;
   overflow: hidden;
-  background: #fff;
+  background: var(--background-light);
   position: relative;
   margin: 0 auto;
   box-shadow: 0px 6px 18px rgba(0,0,0,0.15); /* exact clean shadow */
@@ -92,17 +92,17 @@
 }
 
 .team-name {
-  color: white;
+  color: var(--background-light);
   font-size: 18px;
-  font-family: Inter;
+  font-family: var(--secondary-font);
   font-weight: 400;
   margin-bottom: 4px;
 }
 
 .team-degree {
-  color: white;
+  color: var(--background-light);
   font-size: 14px;
-  font-family: "Exo 2";
+  font-family: var(--secondary-font);
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 2px;
@@ -111,7 +111,7 @@
 .team-role {
   color: rgba(255,255,255,0.75);
   font-size: 14px;
-  font-family: Inter;
+  font-family: var(--secondary-font);
 }
 
 /* DO NOT DISPLAY BORDER */

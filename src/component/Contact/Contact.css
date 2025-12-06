@@ -1,0 +1,251 @@
+/* ===========================
+   CONTACT SECTION
+=========================== */
+.contact-section {
+  padding: 64px 100px;
+}
+
+/* Header */
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.contact-heading-wrapper {
+  max-width: 567px;
+}
+
+.contact-title-main {
+  color: #1FCBD4;
+  font-size: 48px;
+  font-family: "Exo 2";
+  font-weight: 600;
+  line-height: 60px;
+  margin: 0;
+}
+
+.contact-title-sub {
+  color: #63C297;
+  font-size: 48px;
+  font-family: "Exo 2";
+  font-weight: 600;
+  line-height: 60px;
+  margin: 0;
+}
+
+.contact-description {
+  max-width: 749px;
+  color: #161616;
+  font-size: 20px;
+  font-family: Inter, system-ui, sans-serif;
+  line-height: 32px;
+  margin: 0;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+.contact-content-row {
+  align-items: stretch;
+}
+
+/* Card Base */
+.contact-card {
+  padding: 64px 32px;
+  border-radius: 32px;
+  background: #ffffff;
+  outline: 0.8px solid rgba(22, 22, 22, 0.1);
+  outline-offset: -0.8px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.10);
+  transition: 0.3s ease;
+}
+
+/* Card Hover */
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.15);
+}
+
+.contact-card-title {
+  color: #1FCBD4;
+  font-size: 22px;
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ===========================
+   FORM
+=========================== */
+.contact-label {
+  color: #161616;
+  font-size: 16px;
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 400;
+}
+
+.contact-input,
+.contact-input-group {
+  border-radius: 16px !important;
+  border: 0.8px solid rgba(22, 22, 22, 0.1) !important;
+  background-color: #ffffff;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 500;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: rgba(22, 22, 22, 0.35);
+  font-weight: 500;
+}
+
+/* Phone prefix box */
+.contact-prefix {
+  border: none !important;
+  border-radius: 16px 0 0 16px !important;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(22, 22, 22, 0.5);
+}
+
+/* Textarea */
+.contact-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Focus State */
+.contact-input:focus,
+.contact-textarea:focus,
+.contact-input-group:focus-within {
+  border-color: #1FCBD4 !important;
+  box-shadow: 0 0 0 3px rgba(31, 203, 212, 0.25);
+  outline: none;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+.contact-btn {
+  border-radius: 16px;
+  padding: 12px 32px;
+  background: linear-gradient(180deg, #1FCBD4 0%, #63C297 91%);
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Exo 2", system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: all 0.25s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 12px 28px rgba(31, 203, 212, 0.35);
+  filter: brightness(0.92);
+}
+
+/* ===========================
+   CONTACT INFO RIGHT CARD
+=========================== */
+.info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ICON BOX (Address, Email, Phone) */
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #1FCBD4 0%, #63C297 91%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+/* SOCIAL ICON CIRCLES */
+.contact-social-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(22, 22, 22, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-social-circle img {
+  width: 20px;
+  height: 20px;
+}
+
+
+/* ===========================
+   RESPONSIVE BEHAVIOR
+=========================== */
+
+@media (max-width: 1200px) {
+  .contact-section {
+    padding: 64px 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact-section {
+    padding: 64px 32px;
+  }
+
+  .contact-card {
+    padding: 48px 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 48px 16px;
+  }
+
+  .contact-title-main,
+  .contact-title-sub {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .contact-description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .contact-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-card {
+    padding: 32px 20px;
+    border-radius: 24px;
+  }
+
+  .contact-icon-box {
+    width: 42px;
+    height: 42px;
+  }
+
+  .contact-icon-box img {
+    width: 20px;
+  }
+}

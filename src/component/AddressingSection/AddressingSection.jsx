@@ -57,7 +57,7 @@ const AddressingSection = () => {
       <div className="text-center mb-5 px-3">
         <h1
           style={{
-            color: "#001a4d",
+            color: "var(--primary-color)",
             fontSize: "clamp(2rem, 5vw, 3.2rem)",
             fontWeight: 700,
             marginBottom: "8px",
@@ -67,7 +67,8 @@ const AddressingSection = () => {
         </h1>
         <h2
           style={{
-            color: "#4db8a8",
+            color: "var(--accent-color)",
+            fontFamily:"var(--primary-font)",
             fontSize: "clamp(2rem, 5vw, 3.2rem)",
             fontWeight: 700,
             marginBottom: "20px",
@@ -77,7 +78,8 @@ const AddressingSection = () => {
         </h2>
         <p
           style={{
-            color: "#424242",
+            color: "var(--secondary-color)",
+            fontFamily:"var(--secondary-font)",
             maxWidth: "700px",
             margin: "0 auto",
             fontSize: "clamp(0.95rem, 2vw, 1.1rem)",
@@ -98,6 +100,7 @@ const AddressingSection = () => {
               className="addressing-card"
               style={{
                 marginTop: card.id === 2 || card.id === 3 ? "70px" : "0px",
+            
               }}
             >
               <div
@@ -131,19 +134,21 @@ const AddressingSection = () => {
                 <h3
                   style={{
                     color: card.textColor,
+                    fontFamily:"var(--primary-font)",
                     fontSize: "1.25rem",
                     fontWeight: 700,
                     marginBottom: "14px",
                     display: "-webkit-box",
                     WebkitBoxOrient: "vertical",
                     lineHeight: "1.2",
+                    
                   }}
                 >
                   {card.title}
                 </h3>
 
                 {/* DESCRIPTION */}
-                <p style={{ color: "#555", fontSize: "1rem", lineHeight: "1.55" }}>{card.description}</p>
+                <p style={{ color: "var(--secondary-color)", fontSize: "1rem", lineHeight: "1.55",fontFamily:"var(--secondary-font)" }}>{card.description}</p>
               </div>
             </div>
           ))}

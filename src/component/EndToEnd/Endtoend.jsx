@@ -59,9 +59,10 @@ const Endtoend = () => {
 
         <div
           style={{
-            color: "#00004D",
+            color: "var(--primary-color)",
+            fontFamily:"var(--secondary-font)",
             fontSize: "22px",
-            fontFamily: "Inter",
+            // fontFamily: "Inter",
             fontWeight: 500,
           }}
         >
@@ -70,10 +71,10 @@ const Endtoend = () => {
 
         <h2
           style={{
-            color: "#00004D",
+            color: "var(--primary-color)",
             fontSize: "48px",
             fontWeight: 600,
-            fontFamily: "Exo 2",
+            fontFamily: "var(--primary-font)",
           }}
         >
           End-to-End
@@ -81,10 +82,10 @@ const Endtoend = () => {
 
         <h2
           style={{
-            color: "#63C297",
+            color: "var(--accent-color)",
             fontSize: "48px",
             fontWeight: 600,
-            fontFamily: "Exo 2",
+            fontFamily: "var(--primary-font)",
             marginTop: "-35px",
           }}
         >
@@ -96,9 +97,9 @@ const Endtoend = () => {
             width: "750px",
             textAlign: "center",
             fontSize: "20px",
-            color: "#161616",
+            color: "var(--text-dark)",
             lineHeight: "25px",
-            fontFamily: "Inter",
+            fontFamily: "var(--secondary-font)",
           }}
         >
           Our platform seamlessly transforms complex biodiversity data into
@@ -181,10 +182,10 @@ const Endtoend = () => {
             <div
               className="card-title"
               style={{
-                color: "#00004D",
+                color: "var(--primary-color)",
                 fontSize: "20px",
                 fontWeight: 500,
-                fontFamily: "Inter",
+                fontFamily: "var(--secondary-font)",
                 textAlign: "center",
                 transition: "0.3s ease",
               }}
@@ -196,9 +197,9 @@ const Endtoend = () => {
             <div
               className="card-desc"
               style={{
-                color: "#161616",
+                color: "var(--text-dark)",
                 fontSize: "15px",
-                fontFamily: "Inter",
+                fontFamily: "var(--secondary-font)",
                 textAlign: "center",
                 lineHeight: "22px",
                 width: "160px",

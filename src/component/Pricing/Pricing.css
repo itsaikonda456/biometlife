@@ -1,7 +1,7 @@
 .pricing-section {
   width: 100%;
   padding: 64px 100px;
-  background: #e6feff;
+  background: "var(--lightblue-color)";
 }
 
 /* Header */
@@ -23,8 +23,8 @@
 .pricing-subtitle {
   font-size: 22px;
   font-weight: 500;
-  color: #00004d;
-  font-family: Inter;
+  color: var(--primary-color);
+  font-family: var(--secondary-font);
 }
 
 .pricing-title-row {
@@ -36,24 +36,24 @@
 
 .green-title {
   font-size: 40px;
-  color: #63c297;
+  color: var(--accent-color);
   font-weight: 600;
-  font-family: Exo 2;
+  font-family: var(--primary-font);
 }
 
 .blue-title {
   font-size: 40px;
-  color: #00004d;
+  color: var(--primary-color);
   font-weight: 600;
-  font-family: Exo 2;
+  font-family: var(--primary-font);
 }
 
 .pricing-description {
   max-width: 750px;
   font-size: 16px;
-  color: #161616;
+  color: var(--text-dark);
   line-height: 26px;
-  font-family: Inter;
+  font-family: var(--secondary-font);
 }
 
 /* Cards */
@@ -92,27 +92,27 @@
 .plan-title {
   font-size: 20px;
   font-weight: 500;
-  font-family: Inter;
+  font-family: var(--primary-font);
 }
 
 .plan-desc {
   font-size: 15px;
-  color: #161616;
+  color: var(--text-dark);
   line-height: 22px;
-  font-family: Inter;
+  font-family: var(--secondary-font);
 }
 
 /* Price */
 .plan-price {
   font-size: 32px;
   font-weight: 600;
-  font-family: Exo 2;
+  font-family: var(--primary-font);
 }
 
 .plan-price-sub {
   font-size: 13px;
   color: rgba(22,22,22,0.64);
-  font-family: Inter;
+  font-family: var(--secondary-font);
 }
 
 /* Features */
@@ -147,7 +147,7 @@
 
 .feature-text {
   font-size: 14px;
-  color: #161616;
+  color: var(--text-dark);
   font-family: Inter;
 }
 
@@ -156,7 +156,7 @@
   font-size: 13px;
   color: rgba(22,22,22,0.64);
   font-weight: 500;
-  font-family: Inter;
+  font-family: var(--secondary-font);
 }
 
 /* Buttons */
@@ -173,8 +173,8 @@
 
 /* Lite */
 .pricing-card.lite .pricing-btn {
-  border-color: #63c297;
-  color: #63c297;
+  border-color: var(--accent-color);
+  color:var(--accent-color);
 }
 .pricing-card.lite:hover .pricing-btn {
   background: linear-gradient(135deg, #63c297, #63c297);
@@ -207,7 +207,7 @@
   text-align: center;
   font-size: 13px;
   color: rgba(22,22,22,0.64);
-  font-family: Inter;
+  font-family: var("--secondary-font");
 }
 
 /* Responsive */

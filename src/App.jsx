@@ -12,6 +12,10 @@ import Endtoend from "./component/EndToEnd/Endtoend";
 import Insights from "./component/Insights/Insights";
 import Pricing from "./component/Pricing/Pricing";
 import Team from "./component/Team/Team";
+import Contact from "./component/Contact/Contact.jsx";
+import Blogs from "./component/Blogs/Blogs.jsx";
+// import HowWeWork from "./component/HowWeWork/HowWeWork.jsx";
+// import BlogInsights from "./component/BlogInsights/BlogInsights.jsx";
 
 function App() {
   return (
@@ -27,6 +31,10 @@ function App() {
       <Team/>
       <UseCases/>
       <CTASection/>
+      <Contact/>
+      <Blogs/>
+      {/* <BlogInsights/>
+      <HowWeWork/> */}
       <Footer/>
      
     </>

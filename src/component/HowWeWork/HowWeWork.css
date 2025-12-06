@@ -1,0 +1,140 @@
+/* ===============================
+   SECTION WRAPPER
+=============================== */
+.howwework-section {
+  padding: 64px 100px 120px;
+}
+
+/* ===============================
+   HEADER
+=============================== */
+.howwework-title {
+  font-size: 48px;
+  font-family: "Exo 2";
+  font-weight: 600;
+  line-height: 60px;
+  margin-bottom: 24px;
+}
+
+.c-blue {
+  color: #1FCBD4;
+}
+
+.c-green {
+  color: #63C297;
+}
+
+.howwework-desc {
+  max-width: 749px;
+  color: #161616;
+  font-size: 20px;
+  font-family: Inter;
+  line-height: 32px;
+}
+
+/* ===============================
+   CARDS
+=============================== */
+
+.how-card {
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  outline: 0.8px solid;
+  outline-offset: -0.8px;
+  transition: 0.3s ease;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* Inner Layout */
+.how-card-inner {
+  width: 220px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Icon Box */
+.how-icon-box {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 30px rgba(0, 201, 224, 0.19);
+  outline: 1.6px solid;
+  outline-offset: -1.6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.how-icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* Text */
+.how-card-title {
+  font-size: 32px;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 36px;
+}
+
+.how-card-desc {
+  font-size: 16px;
+  color: #161616;
+  font-family: Inter;
+  line-height: 24px;
+}
+
+/* Step Number */
+.how-step-number {
+  opacity: 0.2;
+  font-size: 48px;
+  font-family: "Exo 2";
+  font-weight: 600;
+  line-height: 60px;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+=============================== */
+
+@media (max-width: 1200px) {
+  .howwework-section {
+    padding: 64px 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .howwework-section {
+    padding: 64px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .howwework-section {
+    padding: 48px 16px;
+  }
+
+  .howwework-title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .howwework-desc {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
