@@ -68,7 +68,8 @@ const Contact = () => {
                   <span className="input-group-text contact-prefix">+91</span>
                   <input
                     type="tel"
-                    className="form-control contact-input border-0 ps-2"
+                    className="form-control contact-input contact-input-inner b-0 ps-2"
+                    
                     placeholder="xxxxx xxxxx"
                   />
                 </div>
@@ -152,9 +153,9 @@ const Contact = () => {
               <h5 className="contact-card-title mb-3">Follow Us</h5>
 
               <div className="d-flex align-items-center gap-3">
-                <div className="contact-social-circle">
+                {/* <div className="contact-social-circle">
                   <img src={contact4} alt="social1" className="icon-img-sm" />
-                </div>
+                </div> */}
 
                 <div className="contact-social-circle">
                   <img src={contact5} alt="social2" className="icon-img-sm" />

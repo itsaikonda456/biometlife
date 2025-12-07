@@ -8,7 +8,7 @@ import blog3 from "../../assets/img3.jpg";
 import dateIcon from "../../assets/date.svg";
 import timeIcon from "../../assets/time.svg";
 import arrowIcon from "../../assets/arrow.svg";
-
+import { Link } from "react-router-dom"
 const Insights = () => {
   return (
     <div
@@ -24,26 +24,23 @@ const Insights = () => {
       {/* HEADER SECTION */}
       <div className="text-center d-flex flex-column align-items-center gap-3">
         {/* Line */}
-        <div
+      
+
+        {/* Subtitle */}
+     <div>
+           <h6 className="" style={{fontSize: '22px',
+    fontWeight: '500',
+    color: 'var(--primary-color)',
+    fontFamily: 'var(--secondary-font)'}}>Blogs</h6>
+          <div
           style={{
-            width: "55px",
+            width: "100%",
             height: "4px",
             background: "linear-gradient(180deg, #1FCBD4 0%, #63C297 91%)",
             borderRadius: "64px",
           }}
         ></div>
-
-        {/* Subtitle */}
-        <h5
-          style={{
-            color: "#00004D",
-            fontFamily: "Inter",
-            fontWeight: 500,
-            fontSize: "18px",
-          }}
-        >
-          Blogs
-        </h5>
+     </div>
 
         {/* Title */}
         <div className="d-flex justify-content-center gap-2 section-title">
@@ -86,22 +83,24 @@ const Insights = () => {
       </div>
 
       {/* SEE ALL BLOGS */}
-      <div className="w-100 d-flex justify-content-end">
-        <p
-          style={{
-            width: "120px",
-            color: "#63C297",
-            fontSize: "14px",
-            fontFamily: "Exo 2",
-            fontWeight: 600,
-            textDecoration: "underline",
-            cursor: "pointer",
-            textTransform: "uppercase",
-          }}
-        >
-          See All Blogs
-        </p>
-      </div>
+<div className="w-100 d-flex justify-content-end">
+  <Link to="/resources" style={{ textDecoration: "none" }}>
+    <p
+      style={{
+        width: "120px",
+        color: "#63C297",
+        fontSize: "14px",
+        fontFamily: "Exo 2",
+        fontWeight: 600,
+        textDecoration: "underline",
+        cursor: "pointer",
+        textTransform: "uppercase",
+      }}
+    >
+      See All Blogs
+    </p>
+  </Link>
+</div>
 
       {/* BLOG CARDS - FIXED INTO SINGLE ROW */}
       <div

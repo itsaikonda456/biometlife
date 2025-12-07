@@ -6,13 +6,14 @@ import "./Pricing.css"; // <-- CSS file imported here
 import pricing1 from "../../assets/pricing1.svg";
 import pricing2 from "../../assets/pricing2.svg";
 import pricing3 from "../../assets/pricing3.svg";
-
+import premium from '../../assets/premium.svg';
+import tik from '../../assets/tik.svg';
 const plans = [
   {
     id: "lite",
     label: "Lite",
     accent: "#63C297",
-    icon: pricing1,
+    icon:  pricing3,
     badgeBg: "#63C297",
     titleColor: "#63C297",
     priceLabel: "Contact",
@@ -32,7 +33,7 @@ const plans = [
     id: "standard",
     label: "Standard",
     accent: "#1FCBD4",
-    icon: pricing2,
+    icon: pricing1,
     badgeBg: "#1FCBD4",
     titleColor: "#1FCBD4",
     priceLabel: "Contact",
@@ -54,7 +55,7 @@ const plans = [
     id: "plus",
     label: "Plus",
     accent: "#00004D",
-    icon: pricing3,
+    icon: premium,
     badgeBg: "#00004D",
     titleColor: "#00004D",
     priceLabel: "Contact",
@@ -76,12 +77,15 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <section className="pricing-section">
+    <section className="pricing-section" style={{background: '#E6FEFF'}}>
       {/* HEADER */}
       <div className="pricing-header">
-        <div className="pricing-line"></div>
+        
 
-        <h6 className="pricing-subtitle">Pricing Plans</h6>
+        <div>
+          <h6 className="pricing-subtitle ">Pricing Plans</h6>
+        <div className="pricing-line"></div>
+        </div>
 
         <div className="pricing-title-row">
           <span className="green-title">Clear Pricing,</span>
@@ -95,7 +99,7 @@ const Pricing = () => {
       </div>
 
       {/* CARDS */}
-      <div className="row justify-content-center g-4">
+      <div className="row justify-content-center g-4 mb-3">
         {plans.map((plan) => (
           <div
             key={plan.id}
@@ -145,7 +149,7 @@ const Pricing = () => {
                       className="feature-bullet"
                       style={{ background: plan.accent }}
                     >
-                      <span className="tick"></span>
+                      <img src={tik} alt="" />
                     </span>
                     <span className="feature-text">{feature}</span>
                   </li>
@@ -166,7 +170,7 @@ const Pricing = () => {
       </div>
 
       {/* FOOTNOTE */}
-      <div className="pricing-footer">
+      <div className="pricing-footer mt-5">
         * All plans include secure cloud infrastructure
       </div>
     </section>

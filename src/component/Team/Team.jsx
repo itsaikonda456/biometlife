@@ -12,24 +12,28 @@ const teamMembers = [
     degree: "BSC, AKC, PHD",
     role: "Chief Executive Officer",
     img: team4,
+    description:'Experienced leader across Sales, Technology Strategy, and Marketing with scientific research background.'
   },
   {
     name: "Raghuram Lanka",
     degree: "MS (CS)",
     role: "Chief Technology Officer",
     img: team2,
+    description:'Experience leading core technology and Data & AI platforms in the analytics, healthcare and life sciences domains.'
   },
   {
     name: "Giovanni Bandi",
     degree: "BA, LL.M, PHD",
     role: "Chief Product Officer",
     img: team3,
+    description:'Accomplished executive with experience in regulation, financial risk, and asset management.'
   },
   {
     name: "Andre Hadji-Thomas",
     degree: "BENG (HONS)",
     role: "Environmental Modelling Engineer",
     img: team1,
+    description:'Machine Learning, environmental modelling, decision-making tools for sustainable development.'
   },
 ];
 
@@ -37,10 +41,21 @@ const Team = () => {
   return (
     <section className="team-section container-fluid">
       {/* Header */}
-      <div className="team-header text-center">
-        <div className="team-line"></div>
-
-        <h6 className="team-subtitle">Our Team</h6>
+      <div className="team-header text-center" >
+         <div style={{width:'max-content'}}>
+           <h6 className="" style={{fontSize: '22px',
+    fontWeight: '500',
+    color: 'var(--primary-color)',
+    fontFamily: 'var(--secondary-font)'}}>Our Team</h6>
+          <div
+          style={{
+            width: "100%",
+            height: "4px",
+            background: "linear-gradient(180deg, #1FCBD4 0%, #63C297 91%)",
+            borderRadius: "64px",
+          }}
+        ></div>
+     </div>
 
         <h2 className="team-title">
           <span className="highlight">Meet the Experts</span>
@@ -65,6 +80,7 @@ const Team = () => {
                 <h5 className="team-name">{member.name}</h5>
                 <h6 className="team-degree">{member.degree}</h6>
                 <p className="team-role">{member.role}</p>
+                <p className="team-description">{member.description}</p>
               </div>
 
               <div className="team-hover-border"></div>

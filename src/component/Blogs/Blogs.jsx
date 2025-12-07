@@ -4,13 +4,11 @@ import BlogInsights from '../BlogInsights/BlogInsights'
 import HowWeWork from '../HowWeWork/HowWeWork'
 import Footer from '../Footer/Footer'
 
-function Blogs() {
+function Blogs({blogData}) {
   return (
  <>
- <Navbar />
- <BlogInsights />
+ <BlogInsights blogData={blogData} />
  <HowWeWork />
- <Footer />
  </>
   )
 }

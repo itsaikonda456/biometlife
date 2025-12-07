@@ -80,28 +80,25 @@ export default function UseCases() {
   const [hoveredCard, setHoveredCard] = React.useState(null)
 
   return (
-    <section className="py-5" style={{ backgroundColor: "#e0fcff", minHeight: "100vh" }}>
+    <section className="py-5" style={{ backgroundColor: "#E6FEFF", minHeight: "100vh" }}>
       <div className="container" style={{ maxWidth: "1200px" }}>
         {/* Header */}
         <div className="text-center mb-5">
           <div className="mb-3" style={{    display: 'flex', flexDirection: 'column',alignItems: 'center'}}>
-            <p className="fw-semibold mb-1" style={{ color: "var(--primary-color)" }}>
-              Use Cases
-            </p>
-            <div style={{
-              width: "60px",
-              height: "3px",
-              background: `
-                linear-gradient(
-                    to right,
-                    var(--primary-color) 0%,
-                    var(--primary-color) 40%,
-                    var(--accent-color) 60%,
-                    var(--accent-color) 100%
-                )
-                `,
-                borderRadius: "4px",         
-                   }}></div>
+          <div>
+           <h6 className="" style={{fontSize: '22px',
+    fontWeight: '500',
+    color: 'var(--primary-color)',
+    fontFamily: 'var(--secondary-font)'}}>Use Cases</h6>
+          <div
+          style={{
+            width: "100%",
+            height: "4px",
+            background: "linear-gradient(180deg, #1FCBD4 0%, #63C297 91%)",
+            borderRadius: "64px",
+          }}
+        ></div>
+     </div>
           </div>
           <h2 className="fw-bold mb-3" style={{ fontSize: "clamp(2rem, 5vw, 2.5rem)", color: "var(--text-dark)" }}>
             Solutions for <span style={{ color: "#4db8a8" }}>Every Industry</span>

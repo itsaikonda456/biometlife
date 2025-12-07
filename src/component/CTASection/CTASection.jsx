@@ -61,13 +61,11 @@ export default function CTASection() {
               lineHeight: "1.2",
             }}
           >
-            Ready to Transform Your{" "}
+            Ready to Transform Your <br />
             <span
               style={{
-                background: "linear-gradient(90deg, #4db8a8 0%, #5dd9c6 100%)",
+                color: "var(--color-skyblue,#ffff)",
                 WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-                backgroundClip: "text",
               }}
             >
               Biodiversity Intelligence?
@@ -77,7 +75,7 @@ export default function CTASection() {
           {/* Description */}
           <p
             style={{
-              color: "rgba(255, 255, 255, 0.8)",
+              color: "var(--color-skyblue)",
               fontSize: "clamp(1rem, 2vw, 1.15rem)",
               maxWidth: "650px",
               margin: "0 auto 40px",
@@ -96,10 +94,10 @@ export default function CTASection() {
             {/* Primary Button */}
             <button
               style={{
-                backgroundColor: "#4db8a8",
+                backgroundColor: "var(--color-skyblue)",
                 color: "white",
                 border: "none",
-                borderRadius: "12px",
+                borderRadius: "30px",
                 padding: "16px 32px",
                 fontSize: "1rem",
                 fontWeight: 600,
@@ -111,12 +109,12 @@ export default function CTASection() {
                 gap: "8px",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#3da898"
+                e.currentTarget.style.backgroundColor = "var(--color-skyblue)"
                 e.currentTarget.style.transform = "translateY(-2px)"
                 e.currentTarget.style.boxShadow = "0 6px 20px rgba(77, 184, 168, 0.4)"
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#4db8a8"
+                e.currentTarget.style.backgroundColor = "var(--color-skyblue)"
                 e.currentTarget.style.transform = "translateY(0)"
                 e.currentTarget.style.boxShadow = "0 4px 15px rgba(77, 184, 168, 0.3)"
               }}
@@ -128,10 +126,10 @@ export default function CTASection() {
             {/* Secondary Button */}
             <button
               style={{
-                backgroundColor: "transparent",
-                color: "white",
-                border: "2px solid rgba(255, 255, 255, 0.3)",
-                borderRadius: "12px",
+                backgroundColor: "var(--primary-color)",
+                color: "var(--color-skyblue)",
+                border: "2px solid var(--color-skyblue)",
+                borderRadius: "30px",
                 padding: "14px 32px",
                 fontSize: "1rem",
                 fontWeight: 600,
@@ -140,13 +138,13 @@ export default function CTASection() {
                 backdropFilter: "blur(10px)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.1)"
-                e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.5)"
+                e.currentTarget.style.backgroundColor = "var(--primary-color)"
+                e.currentTarget.style.borderColor = "var(--color-skyblue)"
                 e.currentTarget.style.transform = "translateY(-2px)"
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "transparent"
-                e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.3)"
+                e.currentTarget.style.backgroundColor = "var(--primary-color)"
+                e.currentTarget.style.borderColor = "var(--color-skyblue)"
                 e.currentTarget.style.transform = "translateY(0)"
               }}
             >

@@ -48,37 +48,22 @@ const Endtoend = () => {
           gap: "28px",
         }}
       >
-        <div
+        
+
+       <div className="my-3 mt-5">
+           <h6 className="" style={{fontSize: '22px',
+    fontWeight: '500',
+    color: 'var(--primary-color)',
+    fontFamily: 'var(--secondary-font)'}}>What We Do</h6>
+          <div
           style={{
-            width: "148px",
+            width: "100%",
             height: "4px",
-            background: "linear-gradient(180deg,#1FCBD4 0%,#63C297 100%)",
+            background: "linear-gradient(180deg, #1FCBD4 0%, #63C297 91%)",
             borderRadius: "64px",
           }}
         ></div>
-
-        <div
-          style={{
-            color: "var(--primary-color)",
-            fontFamily:"var(--secondary-font)",
-            fontSize: "22px",
-            // fontFamily: "Inter",
-            fontWeight: 500,
-          }}
-        >
-          What We Do
-        </div>
-
-        <h2
-          style={{
-            color: "var(--primary-color)",
-            fontSize: "48px",
-            fontWeight: 600,
-            fontFamily: "var(--primary-font)",
-          }}
-        >
-          End-to-End
-        </h2>
+     </div>
 
         <h2
           style={{

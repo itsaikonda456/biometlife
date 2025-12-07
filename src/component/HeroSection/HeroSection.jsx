@@ -248,7 +248,7 @@ const slides = [
           style={{ maxWidth: "950px", margin: "0 auto" }}
         >
           {/* STAT BOX 1 */}
-          <div className="col-10 col-md-6 col-lg-5">
+          <div className="col-10 col-md-6 col-lg-5 mt-0">
             <div
               className="text-center p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center"
               style={{
@@ -283,7 +283,7 @@ const slides = [
           </div>
 
           {/* STAT BOX 2 */}
-          <div className="col-10 col-md-6 col-lg-5">
+          <div className="col-10 col-md-6 col-lg-5 mt-0">
             <div
               className="text-center p-4 rounded-4 shadow-sm h-100 d-flex flex-column justify-content-center"
               style={{

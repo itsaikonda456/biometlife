@@ -47,7 +47,7 @@ const AddressingSection = () => {
   return (
     <div
       style={{
-        backgroundColor: "#c8e6f5",
+        backgroundColor: "#E6FEFF",
         padding: "80px 0",
         minHeight: "100vh",
         width: "100%",

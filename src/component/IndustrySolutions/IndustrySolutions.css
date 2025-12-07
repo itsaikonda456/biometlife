@@ -1,0 +1,60 @@
+.industry-wrapper {
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+}
+.industry-solutions {
+  background-color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.industry-solutions h1 {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.industry-solutions .text-info {
+  color: #00b8a9 !important;
+}
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 60px; /* left-right + top-bottom space */
+  max-width: 90%;
+  margin: auto;
+}
+
+.industry-grid .card {
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.industry-grid .card img {
+  width: 75%;
+  display: block;
+}
+
+/* Right card goes slightly down */
+.card.right {
+  margin-top: 200px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .industry-grid {
+    grid-template-columns: 1fr; /* One per row */
+    gap: 30px;
+  }
+
+  .card.right {
+    margin-top: 0; /* Remove the stepped look on mobile */
+  }
+
+  .card img {
+    width: 90%; /* Slightly bigger for mobile */
+  }
+}

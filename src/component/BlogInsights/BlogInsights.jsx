@@ -8,13 +8,13 @@ import blog3 from "../../assets/img3.jpg";
 import dateIcon from "../../assets/date.svg";
 import timeIcon from "../../assets/time.svg";
 import arrowIcon from "../../assets/arrow.svg";
-
-const BlogInsights = () => {
+import { Link } from "react-router-dom";
+const BlogInsights = ({blogData}) => {
   return (
     <div
       style={{
         width: "100%",
-        padding: "100px 80px",
+        padding: "0px 80px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -26,9 +26,20 @@ const BlogInsights = () => {
 
   {/* HEADER */}
   <div className="text-center d-flex flex-column align-items-center gap-3 mb-5">
-    <div className="gradient-line"></div>
-
-    <h5 className="blog-subtitle">Blogs</h5>
+     <div>
+           <h6 className="" style={{fontSize: '22px',
+    fontWeight: '500',
+    color: 'var(--color-skyblue)',
+    fontFamily: 'var(--secondary-font)'}}>Blogs</h6>
+          <div
+          style={{
+            width: "100%",
+            height: "4px",
+            background: "linear-gradient(180deg, #1FCBD4 0%, #63C297 91%)",
+            borderRadius: "64px",
+          }}
+        ></div>
+     </div>
 
     <div className="d-flex justify-content-center gap-2 section-title">
       <h2 className="title-green">Latest</h2>
@@ -42,7 +53,7 @@ const BlogInsights = () => {
 
   {/* BLOG CARDS - Bootstrap Grid */}
   <div className="row g-4">
-    {blogData.map((blog, index) => (
+    {blogData?.map((blog, index) => (
       <div key={index} className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
         <BlogCard {...blog} />
       </div>
@@ -79,7 +90,7 @@ const BlogInsights = () => {
           flexWrap: "nowrap",
         }}
       >
-        {blogData.map((blog, index) => (
+        {blogData?.map((blog, index) => (
           <div key={index} style={{ flex: "0 0 300px" }}>
             <BlogCard {...blog} />
           </div>
@@ -91,15 +102,17 @@ const BlogInsights = () => {
 
 /* ---------------- BLOG CARD ---------------- */
 
-const BlogCard = ({ tag, date, readTime, title, desc, img }) => {
+const BlogCard = ({ id, tag, date, readTime, title, desc, img }) => {
+
   return (
+     <Link to={`/blog/${id}`} style={{ textDecoration: "none" }}>
     <div
       className="blog-card"
       style={{
         width: "100%",
         background: "#fff",
         borderRadius: "18px",
-        outline: "1px solid #1FCBD4",
+        outline: "1px solid var(--accent-color)",
         boxShadow: "0px 3px 5px rgba(0,0,0,0.1)",
         transition: "0.3s ease",
         cursor: "pointer",
@@ -124,7 +137,7 @@ const BlogCard = ({ tag, date, readTime, title, desc, img }) => {
             left: "15px",
             top: "15px",
             padding: "3px 10px",
-            background: "#fff",
+            background: 'rgba(255, 255, 255, 0.10)',
             borderRadius: "50px",
             color: "#63C297",
             fontFamily: "Inter",
@@ -156,7 +169,7 @@ const BlogCard = ({ tag, date, readTime, title, desc, img }) => {
         {/* Title */}
         <h5
           style={{
-            color: "#00004D",
+            color: 'var(--accent-color, --accent-color)',
             fontSize: "18px",
             fontFamily: "Inter",
             fontWeight: 600,
@@ -169,7 +182,7 @@ const BlogCard = ({ tag, date, readTime, title, desc, img }) => {
         {/* Description */}
         <p
           style={{
-            color: "rgba(22,22,22,0.64)",
+            color: "var(--secondary-color)",
             fontSize: "14px",
             fontFamily: "Inter",
             lineHeight: "20px",
@@ -183,7 +196,7 @@ const BlogCard = ({ tag, date, readTime, title, desc, img }) => {
         <div
           className="d-flex align-items-center gap-2 mt-3"
           style={{
-            color: "#63C297",
+            color: "var(--primary-color)",
             fontSize: "14px",
             fontFamily: "Exo 2",
             fontWeight: 600,
@@ -195,45 +208,46 @@ const BlogCard = ({ tag, date, readTime, title, desc, img }) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 
 /* ---------------- BLOG DATA ---------------- */
 
-const blogData = [
-  {
-    tag: "Technology",
-    date: "Nov 2, 2025",
-    readTime: "5 min read",
-    title: "The Future of Biodiversity Monitoring",
-    desc: "How AI and satellite imagery are transforming biodiversity tracking.",
-    img: blog1,
-  },
-  {
-    tag: "Regulation",
-    date: "Oct 28, 2025",
-    readTime: "8 min read",
-    title: "Understanding TNFD for Companies",
-    desc: "A simple breakdown of the TNFD framework and its importance.",
-    img: blog2,
-  },
-  {
-    tag: "Case Study",
-    date: "Oct 15, 2025",
-    readTime: "8 min read",
-    title: "Reducing Risk in Supply Chains",
-    desc: "How organizations mitigate nature-related risks effectively.",
-    img: blog3,
-  },
-  {
-    tag: "Insights",
-    date: "Oct 10, 2025",
-    readTime: "6 min read",
-    title: "Innovations in Eco Intelligence",
-    desc: "Exploring cutting-edge tools in sustainable ecosystem analysis.",
-    img: blog3,
-  },
+// const blogData = [
+//   {
+//     tag: "Technology",
+//     date: "Nov 2, 2025",
+//     readTime: "5 min read",
+//     title: "The Future of Biodiversity Monitoring",
+//     desc: "How AI and satellite imagery are transforming biodiversity tracking.",
+//     img: blog1,
+//   },
+//   {
+//     tag: "Regulation",
+//     date: "Oct 28, 2025",
+//     readTime: "8 min read",
+//     title: "Understanding TNFD for Companies",
+//     desc: "A simple breakdown of the TNFD framework and its importance.",
+//     img: blog2,
+//   },
+//   {
+//     tag: "Case Study",
+//     date: "Oct 15, 2025",
+//     readTime: "8 min read",
+//     title: "Reducing Risk in Supply Chains",
+//     desc: "How organizations mitigate nature-related risks effectively.",
+//     img: blog3,
+//   },
+//   {
+//     tag: "Insights",
+//     date: "Oct 10, 2025",
+//     readTime: "6 min read",
+//     title: "Innovations in Eco Intelligence",
+//     desc: "Exploring cutting-edge tools in sustainable ecosystem analysis.",
+//     img: blog3,
+//   },
 
-];
+// ];
 
 export default BlogInsights;

@@ -5,7 +5,7 @@ import social1 from '../../assets/social.svg'
 import social2 from '../../assets/social-icon-2.svg'
 import emailIcon from '../../assets/email.svg'
 import add from '../../assets/add.svg'
-
+import logo from '../../assets/logob.png'
 export default function Footer() {
   const footerLinks = {
     platform: [
@@ -47,7 +47,7 @@ export default function Footer() {
           
           {/* BRAND + INFO */}
           <div className="col-12 col-lg-4 mb-4 mb-lg-0">
-            <div className="d-flex align-items-center gap-2 mb-3">
+            {/* <div className="d-flex align-items-center gap-2 mb-3">
               <div
                 style={{
                   width: "40px",
@@ -71,7 +71,8 @@ export default function Footer() {
               >
                 Biomet.<span style={{ color: "#4db8a8" }}>life</span>
               </span>
-            </div>
+            </div> */}
+            <img src={logo} alt={logo} className="px-2 mb-2" />
 
             <p
               style={{
@@ -138,7 +139,7 @@ Canopy, Entopia Building 1 Regent St, Cambridge, UK              </a>
                   style={{
                     width: "40px",
                     height: "40px",
-                    borderRadius: "8px",
+                    borderRadius: "50%",
                     backgroundColor: "rgba(255, 255, 255, 0.1)",
                     display: "flex",
                     alignItems: "center",
